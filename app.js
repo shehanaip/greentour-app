@@ -24,7 +24,7 @@ const app = express();
 
 app.use(cors());                // ✅ Allow CORS for all origins
 const corsOptions = {
-  origin: 'https://your-frontend-url.com',
+  origin: 'https://greentour-app.onrender.com', // or your actual frontend URL
   credentials: true
 };
 app.use(cors(corsOptions));      // ✅ Handle preflight requests
