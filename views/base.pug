@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+      meta(name="viewport", content="initial-scale=1,maximum-scale=1,user-scalable=no")
+      link(rel="stylesheet", href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css")
+
+      title Greentour | #{title}
+
+  body
+    // Loader Wrapper
+    .loader-wrapper
+      .loader
+        .fill
+          svg.wave-svg(viewBox="0 0 1440 320" preserveAspectRatio="none")
+            path(d="M0,160 C360,200 1080,120 1440,160 L1440,320 L0,320 Z" fill="#4CAF50")
+            
+    include _header
+
+    block content
+      h1 this is a placeholder
+
+    include _footer
+
+    // JS scripts
+    script(src='https://js.stripe.com/v3/')
+    script(src='/js/mapbox.js')
+    script(src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js")
+    script(src='/js/bundle.js')
+    // Hide loader after page loads
+    script.
+      window.addEventListener('load', function () {
+        const loader = document.querySelector('.loader-wrapper');
+        if (loader) loader.style.display = 'none';
+      });
+      window.addEventListener('load', function () {
+         const loaderWrapper = document.querySelector('.loader-wrapper');
+         if (loaderWrapper) {
+           loaderWrapper.style.transition = 'opacity 0.6s ease';
+           loaderWrapper.style.opacity = '0';
+           setTimeout(() => loaderWrapper.style.display = 'none', 600);
+         }
+       });
