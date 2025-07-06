@@ -6,7 +6,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/users/signup',
+      url: 'https://greentour-app.onrender.com/api/v1/users/signup',
       data: {
         name,
         email,

@@ -12620,7 +12620,7 @@ var login = exports.login = /*#__PURE__*/function () {
           _context.n = 1;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://localhost:3000/api/v1/users/login',
+            url: 'https://greentour-app.onrender.com/api/v1/users/login',
             data: {
               email: email,
               password: password
@@ -12659,7 +12659,7 @@ var logout = exports.logout = /*#__PURE__*/function () {
           _context2.n = 1;
           return (0, _axios.default)({
             method: 'GET',
-            url: 'http://localhost:3000/api/v1/users/logout'
+            url: 'https://greentour-app.onrender.com/api/v1/users/logout'
           });
         case 1:
           res = _context2.v;
@@ -12703,7 +12703,7 @@ var signup = exports.signup = /*#__PURE__*/function () {
           _context.n = 1;
           return (0, _axios.default)({
             method: 'POST',
-            url: 'http://localhost:3000/api/v1/users/signup',
+            url: 'https://greentour-app.onrender.com/api/v1/users/signup',
             data: {
               name: name,
               email: email,
@@ -12758,7 +12758,7 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
       while (1) switch (_context.n) {
         case 0:
           _context.p = 0;
-          url = type === 'password' ? 'http://localhost:3000/api/v1/users/updateMyPassword' : 'http://localhost:3000/api/v1/users/updateMe';
+          url = type === 'password' ? 'https://greentour-app.onrender.com//api/v1/users/updateMyPassword' : 'https://greentour-app.onrender.com//api/v1/users/updateMe';
           _context.n = 1;
           return (0, _axios.default)({
             method: 'PATCH',
@@ -13092,7 +13092,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52551" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55709" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
