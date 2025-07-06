@@ -23,7 +23,11 @@ const app = express();
 // for the fix in the server
 
 app.use(cors());                // ✅ Allow CORS for all origins
-app.options('*', cors());       // ✅ Handle preflight requests
+const corsOptions = {
+  origin: 'https://your-frontend-url.com',
+  credentials: true
+};
+app.use(cors(corsOptions));      // ✅ Handle preflight requests
 app.use(express.json());        // ✅ Then parse JSON body
 // for the fix ends
 
