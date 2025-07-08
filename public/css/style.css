@@ -1458,6 +1458,14 @@ body{
   width: auto;
   margin: auto;
 }
+  .card-container {
+    grid-gap: 3rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .card {
+    min-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
