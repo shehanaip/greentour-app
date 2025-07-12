@@ -3,9 +3,20 @@ html
   head
     block head
       meta(charset='UTF-8')
-      meta(name="description", content="Book unforgettable eco-tours with Greentour. Nature, adventure, and travel made easy.")
+      meta(name="description" content="Book unforgettable eco-tours with Greentour. Explore Bangladesh's lush forests, waterfalls, and wildlife with expert guides. Secure your spot now!")
       meta(property="og:title", content="Greentour")
-      meta(property="og:image", content="https://greentour-app.onrender.com/img/fabicon.png")
+      // Open Graph tags
+      meta(property="og:title" content="Forest Hiking Adventure | Greentour")
+      meta(property="og:description" content="Join Greentour’s eco-adventures for a unique nature experience. Book your tour today!")
+      meta(property="og:image" content="https://greentour-app.onrender.com/img/forest-hiking.jpg")
+      meta(property="og:url" content="https://greentour-app.onrender.com/tours/forest-hiking")
+      meta(property="og:type" content="website")
+      // Twitter Card tags
+      meta(name="twitter:card" content="summary_large_image")
+      meta(name="twitter:title" content="Forest Hiking Adventure | Greentour")
+      meta(name="twitter:description" content="Discover breathtaking eco-tours with Greentour. Book your next adventure today!")
+      meta(name="twitter:image" content="https://greentour-app.onrender.com/img/forest-hiking.jpg")
+      //main thing
       meta(name='viewport', content='width=device-width, initial-scale=1.0')
       link(rel='stylesheet', href='/css/style.css')
       link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
@@ -14,6 +25,21 @@ html
       link(rel="stylesheet", href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css")
 
       title Greentour | #{title}
+      // Structured Data JSON-LD for seo
+      script(type="application/ld+json").
+        {
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Forest Hiking Adventure",
+          "description": "A guided hike through the lush forests of Bangladesh.",
+          "image": "https://greentour-app.onrender.com/img/forest-hiking.jpg",
+          "offers": {
+            "@type": "Offer",
+            "price": "100",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
 
   body
     // Loader Wrapper
