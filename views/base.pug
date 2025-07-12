@@ -24,6 +24,12 @@ html
       link(rel="stylesheet", href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css")
 
       title Greentour | #{title}
+      script(async src='https://www.googletagmanager.com/gtag/js?id=G-Y5YXGMFN7J')
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y5YXGMFN7J');
       // Structured Data JSON-LD for seo
       script(type="application/ld+json").
         {
